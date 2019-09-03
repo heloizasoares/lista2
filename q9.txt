@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+void main(){
+    float precoFab, imposto, lucro, precoCons;
+
+    printf("Digite o preco de fabricacao do carro: ");
+    scanf("%f", &precoFab);
+
+    imposto = precoFab * 0.45;
+    lucro = precoFab * 0.12;
+
+    precoCons = imposto + lucro + precoFab;
+
+    printf("Custo final ao consumidor: %.1f", precoCons);
+}

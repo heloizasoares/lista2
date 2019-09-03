@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+void main(){
+    int num1, num2, num3, soma;
+
+    printf("Digite tres numeros:");
+    scanf("%d", &num1); scanf("%d", &num2); scanf("%d", &num3);
+
+    soma = num2 + num3;
+
+    if(num1 > soma){
+        printf("O primeiro numero eh maior que a soma dos outros dois");
+    }
+    else if(num1 == soma){
+        printf("O primeiro numero eh igual a soma dos outros dois");
+    }
+    else{
+        printf("O primeiro numero eh menor que a soma dos outros dois");
+    }
+}

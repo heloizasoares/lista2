@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+void main(){
+    int num1, num2, num3;
+    int t1, t2, t3;
+
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &num1);
+
+    printf("Digite o segundo numero: ");
+    scanf("%d", &num2);
+
+    printf("Digite o terceiro numero: ");
+    scanf("%d", &num3);
+
+    if(num1 > num2){
+        t1 = num1;
+        num1 = num2;
+        num2 = t1;
+    }
+    if(num1>num3){
+        t3 = num1;
+        num1 = num3;
+        num3 = t3;
+    }
+    if(num2>num3){
+        t2 = num2;
+        num2 = num3;
+        num3 = t2;
+    }
+    printf("%d < %d < %d", num1, num2, num3);
+}

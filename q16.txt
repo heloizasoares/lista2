@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+void main(){
+    int x1, y1, x2, y2, x3, y3;
+    int l1 = 0, l2 = 0, l3 = 0;
+    printf("Digite o ponto P1, x");
+    scanf("%d", &x1);
+    printf("Digite o ponto P1, y");
+    scanf("%d", &y1);
+
+    printf("Digite o ponto P2, x");
+    scanf("%d", &x2);
+    printf("Digite o ponto P2, y");
+    scanf("%d", &y2);
+
+    printf("Digite o ponto P3, x");
+    scanf("%d", &x3);
+    printf("Digite o ponto P3, y");
+    scanf("%d", &y3);
+    //pitagoras pra encontrar os valores dos lados
+    l1 = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    l2 = sqrt(pow(x3 - x2, 2) + pow(y3 - y2, 2));
+    l3 = sqrt(pow(x3 - x1, 2) + pow(y3 - y1, 2));
+    // condição de existencia de um triangulo (l1 < l2+l3
+    if(l1 < l2+l3 && l2 < l1+l3 && l3 < l1+l2){
+        if(l1 == l2 && l2 == l3){
+            printf("Triangulo equilatero");
+        }
+        if(l1 == l2 || l1 == l3 || l2 == l3){
+            printf("Triangulo isosceles");
+        }
+        else{
+            printf("Triangulo escaleno");
+        }
+    }
+    else{
+        printf("Não é um triangulo");
+    }
+}
+
+
+
+
+
+

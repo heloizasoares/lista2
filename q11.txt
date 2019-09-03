@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+void main(){
+    float latao;
+
+    printf("Digite a quantidade desejada do latao: ");
+    scanf("%f", &latao);
+
+    printf("Quantidade de cobre: %.1f\n", latao * 0.7);
+    printf("Quantidade de zinco: %.1f", latao * 0.3);
+}

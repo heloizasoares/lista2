@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+void main(){
+    int vMax, vMot, v;
+
+    printf("Digite a velocidade maxima permitida: ");
+    scanf("%d", &vMax);
+
+    printf("Digite a velocidade do motorista: ");
+    scanf("%d", &vMot);
+
+    v = vMot - vMax;
+
+    if((v > 0) && (v <= 10)){
+       printf("Multa: 50 reais");
+    }
+    else if((v>=11) && (v<=30)){
+       printf("Multa: 100 reais");
+    }
+    else if(v >= 31){
+       printf("Multa: 200 reais");
+    }
+    else {
+        printf("O motorista nao fui multado, pois nao ultrapassou a velocidade maxima permitida.");
+    }
+}

@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+void main() {
+  float n1 = 0, n2 = 0, n3 = 0,mFinal, reposicao;
+
+  printf("Digite a primeira nota: ");
+  scanf("%f", &n1);
+
+  printf("Digite a segunda nota: ");
+  scanf("%f", &n2);
+
+  printf("Digite a terceira nota: ");
+  scanf("%f", &n3);
+
+  mFinal = (n1 + n2 + n3)/3;
+
+  if((mFinal >= 7) || ((mFinal>=5) && (n1 >= 3 && n2 >= 3 && n3 >= 3))){
+    printf("A media final eh: %3.2f\n", mFinal);
+    printf("O aluno esta aprovado :)");
+  }
+  else if((mFinal >= 3)){
+    printf("A media final eh: %3.2f \n", mFinal );
+    printf("O aluno esta na reposição \n");
+      if (n1 < 2 && n1 < n3){
+        printf("Digite a nota da reposicao: ");
+        scanf("%f", &reposicao);
+
+        n1 = reposicao;
+      }
+      else if (n2 <= n1 && n2 < n3){
+        printf("Digite a nota da reposicao: ");
+        scanf("%f", &reposicao);
+
+        n2 = reposicao;
+      }
+      else if (n3 <= n1 && n3 <= n2){
+        printf("Digite a nota da reposicao: ");
+        scanf("%f", &reposicao);
+
+        n3 = reposicao;
+      }
+      mFinal = (n1 + n2 + n3)/3;
+
+      printf("media final: %3.2f \n", mFinal);
+      if ((mFinal >= 7) || (mFinal >= 5 && reposicao >= 3)){
+        printf ("O aluno esta aprovado :)");
+      }
+      else {
+        printf ("O aluno esta reprovado");
+      }
+  }
+  else {
+    printf("A media final eh: %3.2f\n", mFinal);
+    printf ("O aluno esta reprovado");
+  }
+}

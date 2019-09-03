@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void main(){
+    float anos, num, preco, valor;
+
+    printf("Numero de anos: ");
+    scanf("%f", &anos);
+
+    printf("Numero de cigarros por dia: ");
+    scanf("%f", &num);
+
+    printf("Preco de uma carteira: ");
+    scanf("%f", &preco);
+
+    valor = (((anos*365)*num)/20)*preco;
+    printf("Voce gastou: %.2f reais em cigarros durante %.f anos", valor, anos);
+}
